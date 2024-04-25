@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .regis {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin: 20px 0;
+    }
+
+    hr {
+      margin: 20px auto;
+      width: 60%;
+      border: 1px solid #ccc;
+    }
+
+    .formReg {
+      margin-top: 20px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .custom-button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff8800;
+      color: white;
+      cursor: pointer;
+    }
+
+    .custom-button:hover {
+      background-color: #ff7700;
+    }
+
+    .account {
+      margin-top: 20px;
+    }
+
+    .link {
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <section class="regis">
+    <div class="content">
+      <!-- <img src="logo.webp" class="logo" alt="Logo"> -->
+      <h3>Lets Get you set up !</h3>
+      <p>Create a new account to access all features</p>
+      <hr>
+      <div class="formReg">
+        <div>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter Your Name"
+            required
+          >
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter Your email"
+            required
+          >
+        </div>
+        <div>
+          <label for="pass">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pass"
+            placeholder="Enter new password"
+            required
+          >
+        </div>
+        <button
+          type="button"
+          class="buttonRegis btn btn-md btn-warning w-100 custom-button text-white"
+          data-toggle="modal"
+          data-target="#verifyModal"
+        >
+          Register Account
+        </button>
+        <h6 class="account mt-5 text-center">
+          Already have an account?
+          <span>
+            <a href="#" class="link">Log in here</a>
+          </span>
+        </h6>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

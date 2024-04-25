@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Recipe</title>
+  <style>
+    /* Reset CSS */
+    body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd, dt {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Box-sizing border-box */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .justify-content-center {
+      justify-content: center;
+    }
+
+    .align-items-center {
+      align-items: center;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    /* Content section */
+    #content {
+      height: 100vh;
+    }
+
+    .content-container {
+      width: 50%;
+      height: 50%;
+    }
+
+    .addFile {
+      padding-top: 3%;
+      border-radius: 20px;
+    }
+
+    .addPhoto {
+      background-color: #f1f1f1;
+      height: 50%;
+      margin-top: 5%;
+      margin-bottom: 2%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+
+    .upload-image {
+      display: none;
+    }
+
+    .form-control {
+      width: 100%;
+    }
+
+    .addIngredients {
+      background-color: #f1f1f1;
+      padding-top: 2%;
+      border-radius: 20px;
+      margin-bottom: 3%;
+    }
+
+    .selectCategory {
+      width: 25%;
+    }
+
+    .buttonPost {
+      margin-top: 3%;
+      margin-bottom: 5%;
+    }
+
+    .post {
+      width: 50%;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <section id="content" class="d-flex justify-content-center align-items-center">
+    <div class="content-container w-50 h-50 d-flex flex-column">
+      <form action="#" class="addFile w-100 pt-3 rounded" method="post">
+        <div class="addPhoto bg-light h-50 mb-2 mt-5 text-center rounded">
+          <div class="upload-area" id="previewContainer"></div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyAwLV493k35SJvH5D17bDos2YWqUnyvKegLULWXRIHQ&s" width="300px">ys/RD84QzQ5OjcB
+            
+          <input
+            type="file"
+            name="img"
+            class="upload-image form-control visually-hidden"
+            id="imageUpload"
+            accept="image/*"
+            onchange="previewImage()"
+          />
+        </div>
+        <div class="upload w-100 mb-2 p-1 text-center">
+          <label for="imageUpload">Add Photo</label>
+        </div>
+        <!-- Remove this img tag or correct it properly -->
+        <!-- <img href="lb.jpg"/> -->
+        <div class="form-group">
+          <input 
+            type="text"
+            name="title"
+            class="form-control"
+            placeholder="Recipe Title"
+            
+          />
+        </div>
+        <div class="addIngredients w-100 mb-0 mb-md-3 pt-2 rounded">
+          <div class="form-floating">
+            <textarea
+              class="w-100 rounded-2 ps-3 pt-3 ms-0 "
+              placeholder="Ingredients"
+              name="ingredients"
+              style="height: 150px "
+            ></textarea>
+          </div>
+        </div>
+        
+        <div class="buttonPost mt-3 mb-5 d-flex justify-content-center align-items-center">
+          <button type="submit" class="post btn w-50 rounded text-center mb-5">
+            Post
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

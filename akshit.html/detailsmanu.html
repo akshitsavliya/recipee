@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Content Section Styles */
+    .content-section {
+      background-color: #f5f5f5;
+      padding: 20px 0;
+    }
+
+    .postHeader {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .block {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    .comment-user {
+      display: inline-block;
+    }
+
+    .nameAcc {
+      margin-bottom: 0;
+    }
+
+    .AccRecipe {
+      margin-top: 0;
+    }
+
+    .content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .thumbnail img {
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .ingredients h3 {
+      margin-bottom: 10px;
+    }
+
+    .booklike {
+      margin-top: 20px;
+    }
+
+    .book,
+    .like {
+      padding: 10px;
+      border: none;
+      border-radius: 50%;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .bar {
+      border: none;
+      height: 2px;
+      background-color: #ccc;
+    }
+
+    .comment-content {
+      padding: 20px 0;
+    }
+
+    .comment-user img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .comment-user h6 {
+      margin-bottom: 0;
+    }
+
+    .block {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    .comment-section textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    .send {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .send:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <!-- Navbar content goes here -->
+      Navbar
+    </nav>
+  </header>
+  <section class="container-fluid bg-info row content-section d-flex flex-column mt-5">
+    <!-- post header start -->
+    <div class="postHeader d-flex align-items-center justify-content-between mt-5">
+      <!-- Left -->
+      <div class="d-flex align-items-center ms-5">
+        <div class="block mt-1 ms-2 me-3"></div>
+        <img src="" alt="" class="mt-1 me-2" />
+        <div class="comment-user p-1">
+          <div class="nameAcc">
+            <p class="mb-0">Author Name</p>
+          </div>
+          <div class="AccRecipe">
+            <p class="font-weight-bold mb-0">10 Recipes</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="content d-flex me-5 p-1 text-right">
+        <div class="comment-user">
+          <div class="date">
+            <p class="mb-0">21 February 2023</p>
+          </div>
+          <div class="likes">
+            <p class="font-weight-bold mb-0">20 Likes - 2 Comments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- post header end -->
+  </section>
+  <!-- content section end -->
+  <!-- content section2 start -->
+  <section class="content container-fluid d-flex justify-content-center align-items-center flex-column">
+    <div class="content-container mt-2">
+      <h1>Recipe Title</h1>
+    </div>
+    <div class="thumbnail d-flex justify-content-center mt-2">
+      <img src="" class="w-50 h-25 d rounded" alt="image-menu" />
+    </div>
+    <div class="ingredients mt-3 container-fluid">
+      <h3>Ingredients</h3>
+      <ul class="list-unstyled">
+        <li>- Ingredient 1</li>
+        <li>- Ingredient 2</li>
+        <li>- Ingredient 3</li>
+      </ul>
+    </div>
+    <div class="booklike d-flex justify-content-start ps-5 mt-5 container-fluid">
+      <!-- Button Bookmark -->
+      <button type="button" class="book btn btn-sm rounded me-2 justify-content-center">
+        <img src="./../assets/bookmark.svg" alt="Bookmark" class="" />
+      </button>
+
+      <!-- Button Like -->
+      <button type="button" class="like btn btn-sm rounded">
+        <img src="assets/img/like.svg" alt="Like" class="btn-icon" />
+      </button>
+    </div>
+    <hr class="bar mt-3 mb-5" />
+    <section class="comment-content d-flex flex-column container-fluid pl-5">
+      <div class="content d-flex mb-4 align-items-center">
+        <img src="assets/img/iconComment.png" alt="" />
+        <div class="comment-user ms-2">
+          <div class="comment1">
+            <h6>Karen</h6>
+          </div>
+          <div class="comment2">
+            <h6 class="font-weight-bold">20 Recipes</h6>
+          </div>
+        </div>
+        <div class="block ms-5 me-3"></div>
+        <p class="mt-2">Wow, I just made this and it was delicious! Thanks for sharing!</p>
+      </div>
+      <div class="content d-flex align-items-center">
+        <img src="assets/img/iconComment.png" alt="" />
+        <div class="comment-user ms-2">
+          <div class="comment1">
+            <h6>Karen</h6>
+          </div>
+          <div class="comment2">
+            <h6 class="font-weight-bold">20 Recipes</h6>
+          </div>
+        </div>
+        <div class="block ms-5 me-3"></div>
+        <p class="mt-2">so simple and delicious!</p>
+      </div>
+    </section>
+    <hr class="bar mt-5 mb-5" />
+    <div class="comment-section container-fluid pl-5">
+      <textarea class="form-control ms-0" placeholder="Your comment here!" id="floatingTextarea2" style="height: 150px;"></textarea>
+      <button class="send btn w-25 mt-4 mb-5 rounded text-center text-white">Send a comment</button>
+    </div>
+  </section>
+  <!-- content section2 end -->
+  <hr />
+  <footer class="footer">
+    <!-- Footer content goes here -->
+    Footer
+  </footer>
+</body>
+</html>

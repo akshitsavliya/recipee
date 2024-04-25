@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Content Section Styles */
+    .container-content {
+      padding: 20px;
+    }
+
+    .postHeader {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .block {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    .comment-user {
+      display: inline-block;
+    }
+
+    .nameAcc {
+      margin-bottom: 0;
+    }
+
+    .logoutAcc {
+      margin-top: 0;
+    }
+
+    .tabs-wrapper {
+      padding: 20px;
+    }
+
+    .nav-link {
+      cursor: pointer;
+    }
+
+    .bar {
+      border: none;
+      height: 2px;
+      background-color: #ccc;
+    }
+
+    .content-wrapper {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .utility {
+      justify-content: space-between;
+    }
+
+    .btn-edit,
+    .btn-delete {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .pagination {
+      margin-top: 20px;
+    }
+
+    .page-prev,
+    .page-next {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-warning {
+      background-color: #ffc107;
+      border-color: #ffc107;
+      color: #212529;
+    }
+
+    .btn-warning:hover {
+      background-color: #e0a800;
+      border-color: #d39e00;
+    }
+
+    /* Search Menu Styles */
+    .primary {
+      background-color: #f5f5f5;
+    }
+
+    .discover {
+      background-image: url("https://picsum.photos/800/400");
+      background-size: cover;
+      padding: 100px 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .slide1 h1 {
+      font-size: 2.5em;
+    }
+
+    .searchBar {
+      width: 40%;
+      margin: auto;
+    }
+
+    .search {
+      border-radius: 25px;
+      height: 40px;
+      width: 100%;
+    }
+
+    .srcMenu {
+      border-radius: 25px;
+      height: 40px;
+      width: 20%;
+    }
+
+    .filter {
+      margin-top: 20px;
+      width: 40%;
+      margin: auto;
+    }
+
+    .srcNew,
+    .srcPopular,
+    .srcVegetarian,
+    .srcBreakfast {
+      border-radius: 25px;
+      height: 40px;
+      width: 20%;
+    }
+
+    #food-image {
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .round-image img {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <!-- Navbar content goes here -->
+      Navbar
+    </nav>
+  </header>
+  <section class="primary">
+    <section class="discover">
+      <div class="slide1 mt-4 ms-5">
+        <section>
+          <h1>
+            Search & Explore Your Favorite <br /> Recipes
+          </h1>
+        </section>
+        <div class="searchBar d-flex">
+            <input
+              type="text"
+              class="search col-8 ps-5 border-0 font-weight-normal"
+              placeholder="Enter Recipe or Ingredients"
+            />
+            <button id="srcMenu" href="#" class="srcMenu btn ms-3 col-2 d-flex align-items-center justify-content-center">
+              Search
+            </button>
+          </div>
+          
+        <div class="filter d-flex mt-3">
+          <button id="srcNew" href="#" class="srcNew btn col-1 d-flex align-items-center justify-content-center">
+            New
+          </button>
+          <button id="srcPopular" href="#" class="srcPopular btn ms-3 col-1 d-flex align-items-center justify-content-center">
+            Popular
+          </button>
+          <button id="srcVegetarian" href="#" class="srcVegetarian btn ms-3 col-1 d-flex align-items-center justify-content-center">
+            Vegetarian
+          </button>
+          <button id="srcBreakfast" href="#" class="srcBreakfast btn ms-3 col-1 d-flex align-items-center justify-content-center">
+            Breakfast
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- TODO section search end -->
+    <!-- TODO section content start -->
+    <div class="content-wrapper container-fluid d-flex mb-0">
+      <div class="container menu-content-pic d-flex flex-column mt-5 ms-5">
+        <!-- Items to be rendered here -->
+      </div>
+    </div>
+    <!-- TODO section content end -->
+    <div class="container-fluid pagination justify-content-center row mb-5">
+      <button id="btn-prev" class="btn btn-warning btn-prev col-lg-1" disabled>Previous</button>
+      <span class="col-lg-2 text-center">Page 1 of 5</span>
+      <button id="btn-next" class="btn btn-warning btn-next col-lg-1">Next</button>
+    </div>
+  </section>
+  <footer class="footer">
+    <!-- Footer content goes here -->
+    Footer
+  </footer>
+</body>
+</html>
